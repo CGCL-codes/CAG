@@ -4,6 +4,12 @@ CAG is an efficient stream processing system that efficiently maintains load bal
 # Introduction
 Current distributed stream processing systems like Storm, Flink, Samze, S4, etc. primary objective is to process data with high throughput at low latency. The architecture of these systems has a scale-out architecture to process an immense volume of data with a continuous data stream. Shuffle grouping , Key grouping, and partial key grouping are the important stream partitioning schemes use in these systems. Shuffle grouping sends tuples to  in a roundrobin style. The shuffle grouping is mostly used for stateless operators because when it is used for stateful operators, it an cause scalability issues in terms of memory. Additionally, communication cost increases when data is partitioned uniformly across operator instances. Shuffle  efficiently manages load balance. However, due to the scalability and heavy aggregation cost, it is not preferred for stateful operators. 
 
+
+
+![alt text](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.pdf?raw=true)
+![alt text](https://github.com/mudassar66/CAG/tree/main/images/aggregation_cost.pdf?raw=true)
+
+
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
