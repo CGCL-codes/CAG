@@ -6,7 +6,7 @@ Current distributed stream processing systems like Storm, Flink, Samze, S4, etc.
 
 
 
-![alt text](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.pdf?raw=true)
+![alt text](images/aggregation_cost.pdf?raw=true)
 ![alt text](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.pdf?raw=true)
 
 
