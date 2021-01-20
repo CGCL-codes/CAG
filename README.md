@@ -1,8 +1,8 @@
 # CAG
+CAG is an efficient stream procesisng system that efficiently maintains load balance and efficiently provides a solution to consistent partitioning and minimize aggregation cost. CAG limits the partition of data and process the DAG in one node. We reduce the partition of data, so that stream processing's overall computation and aggregation cost remain low. 
+ The results of the experiment using large-scale real-world datasets show that CAG achieves a 3.5× improvement in terms of processing throughput and reduces the latency by 97% compared to state-of-the-art design.
+# Introduction
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
