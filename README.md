@@ -18,7 +18,20 @@ Based on the above analysis, we find that aggregation cost and inconsistent stre
 CAG designs a threshold detector component for identifying the downstream operator instance threshold. The detector identifies the threshold of the downstream operator instance using performance modeling before the actual processing. We further design a stream partitioning component that is responsible for the necessary partitioning of data among downstream operator instances. The following contributions: 1) demonstrate that along with poor load balancing, inconsistent partitioning, and aggregation cost are crucial factors to reduce stream processing efficiency for stateful applications when stream distribution is skewed; 2) propose a cost model for stream partitioning that considers the communication cost and reduction of key splitting for stateful operations; 3) we introduce CAG, an efficient stream partitioning scheme which efficiently solves load balancing issue with consistent partitioning and minimizes the aggregation cost; 4) we measure the impact of CAG on Apache Storm and find that CAG achieves an up to 3.5x improvement in terms of throughput and reduces latency up to 97% as compared to state-of-the-art design. 
 
 
-![Consistent partitioning](https://github.com/mudassar66/CAG/blob/main/images/cag_main.png?raw=true)
+# Architecture of CAG
+
+![CAG architecture](https://github.com/mudassar66/CAG/blob/main/images/cag_main.png?raw=true)
+
+CAG consists of two components: 1) a threshold detecting component and 2) a stream partitioning component. 
+
+The threshold detecting component is a standalone component that analyzes the tuple count, and based on the specific streaming application, returns the threshold value for that streaming application. 
+
+The stream partitioning component maintains a global hash-based array that collects information of tuples for each specific task. 
+
+# How to use
+
+## Environment
+
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
