@@ -41,7 +41,7 @@ Install Apace Maven (Please refer to http://maven.apache.org/ to learn more).
 
 Submit the example to the Storm cluster
 
-  storm jar storm-starter-1.2.2.jar storm.starter.CostModelFd CAGTopology *parameters* 
+  storm jar storm-starter-1.2.2.jar storm.starter.CostModelFd CAGTopology 30 90 66 1 5 96 6 1 0 datasets/didi2.txt didi 
 
 
 
