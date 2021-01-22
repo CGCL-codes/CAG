@@ -6,9 +6,18 @@ Current distributed stream processing systems like Storm, Flink, Samze, S4, etc.
 
 We examine the performance of shuffle and partial key grouping to investigate how aggregation cost can cause the performance degradation of the distributed stream processing systems in an experiment. We observe the average processing time and average aggregation time of the tuples in different parallelism levels for these grouping schemes. The highest aggregation time of shuffle grouping is 70% of the processing time. For partial key grouping, the highest aggregation time is 84% of the processing time. We can see that aggregation time for partial key grouping increases with the parallelism levels from the results as shown in the following figure. From the above results, we can see that aggregation time for partial key grouping increases with the parallelism levels. It is evident from these results is that the aggregation cost is a root cause of the scalability issue for both shuffle and partial key grouping.
 
-![Aggregation Cost](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.png?raw=true)
+![Aggregation cost](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.png?raw=true)
+
+We ran another experiment to examine the performance of partial key grouping in greater detail to highlight the improtance of consistent partitioning i.e., the throughput or latency values are close to each other when a similar tuple input rate is applied to the system. The result in following figure shows that based on worker processes positions, the partitioning scheme performs differently. We observe that the performance of the second configuration is always lower than the first configuration. This scenario exhibits that partial key grouping is performing inconsistent partitioning.  
+
+![Consistent partitioning](https://github.com/mudassar66/CAG/blob/main/images/consistency.png?raw=true)
+
+Based on the above analysis, we find that aggregation cost and inconsistent stream partitioning scheme are two significant problems for the performance degradation of the DSPS. The aggregation cost affects the performance with the increase in DAG levels. Additionally, the inconsistent partitioning can utilize the physical resources inefficiently. It leads to a problem where some resources are used more than their capacity, and some resources remain idle.  Based on these insights, we propose a consistent and aggregation cost-aware efficient stream partitioning scheme called CAG (Consistent and Aggregation cost-aware Grouping). CAG partitions data from upstream OIs to downstream OIs so that overall communication overheads are reduced, and resources are used efficiently. With such an arrangement, the aggregation cost is reduced, and a consistent stream partitioning is attained.
 
 
+CAG designs a threshold detector component for identifying the downstream operator instance threshold as shown in following figure. The detector identifies the threshold of the downstream operator instance using performance modeling before the actual processing. We further design a stream partitioning component that is responsible for the necessary partitioning of data among downstream operator instances.
+
+![Consistent partitioning](https://github.com/mudassar66/CAG/blob/main/images/cag_main.png?raw=true)
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
