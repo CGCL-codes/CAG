@@ -7,7 +7,7 @@ Current distributed stream processing systems like Storm, Flink, Samze, S4, etc.
 
 
 ![alt text](https://raw.githubusercontent.com/mudassar66/CAG/e15aa09c98f49979676e45b8686d4ad7ad1573ff/images/aggregation_cost.pdf?raw=true)
-![alt text](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.pdf?raw=true)
+![alt text](https://github.com/mudassar66/CAG/blob/main/images/aggregation_cost.png?raw=true)
 
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
