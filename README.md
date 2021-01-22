@@ -31,6 +31,18 @@ The stream partitioning component maintains a global hash-based array that colle
 # How to use
 
 ## Environment
+We implement CAG on top of Apache Storm and deploy the system on the cluster. The experiments are divided into two different configurations. A four-node cluster is used in the first configuration, each equipped with an Intel 2.5 GHz CPU, 64 GB DDR3 RAM,  and one Gigabit ethernet card. In the second configuration, an eight-node cluster is used with an Intel 2.8 GHz CPU, 64 Gb DDR3 RAM, and one Gigabit ethernet card. 
+
+## Pre-requisit Settings
+
+Install Apache Storm (Please refer to http://storm.apache.org/ to learn more).
+
+Install Apace Maven (Please refer to http://maven.apache.org/ to learn more).
+
+Submit the example to the Storm cluster
+
+  storm jar storm-starter-1.2.2.jar storm.starter.CostModelFd CAGTopology *parameters* 
+
 
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
