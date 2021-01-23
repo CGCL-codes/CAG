@@ -41,33 +41,33 @@ Install Apace Maven (Please refer to http://maven.apache.org/ to learn more).
 
 Submit the example to the Storm cluster
 
+```bash
 storm jar storm-starter-1.2.2.jar storm.starter.CostModelFd CAG_KG_Topology <spout_instances> <bolt_1_instances> <bolt_2_instances> 1 <tuples_to_emit> <number_of_workers>
  <number_of_ackers> 1 0 <dataset_file> <name_of_dataset> 
-storm jar storm-starter-1.2.2.jar storm.starter.CostModelIPC CAG_Topology <spout_instances> <bolt_1_instances> <bolt_2_instances> 1 <tuples_to_emit> <number_of_workers> <number_of_ackers> 1 0 <threshold_limit> <number_of_supervisors> 2 <dataset_file> <name_of_dataset>
-
-
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+```
 
 ```bash
-pip install foobar
+storm jar storm-starter-1.2.2.jar storm.starter.CostModelIPC CAG_Topology <spout_instances> <bolt_1_instances> <bolt_2_instances> 1 <tuples_to_emit> <number_of_workers> <number_of_ackers> 1 0 <threshold_limit> <number_of_supervisors> 2 <dataset_file> <name_of_dataset>
 ```
 
-## Usage
+## Configurations
 
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```bash
+<spout_instances> = 30  (# Integer value)
+<bolt_1_instances>  = 90  (# Integer value)
+<bolt_2_instances> = 60 (# Integer value)
+<tuples_to_emit> =  50  (# Integer value)
+number_of_workers> = 180 (# Integer value)
+<number_of_ackers> = 12 (# Integer value)
+<threshold_limit> = 100000 (# Integer value)
+<number_of_supervisors> = 12 (# Integer value)
+<dataset_file> =  abc.txt (String value)
+<name_of_dataset> =  abc (String value)
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+ 
 
-Please make sure to update tests as appropriate.
+## Author and Copyright
+CAG is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Muhammad Mudassar Qureshi (mudassar@hust.edu.cn), Hanhua Chen (chen@hust.edu.cn), Fan Zhang(zhangf@hust.edu.cn), Hai Jin (hjin@hust.edu.cn)
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+Copyright (C) 2017, STCS & CGCL and Huazhong University of Science and Technology.
