@@ -70,4 +70,4 @@ number_of_workers> = 180 (# Integer value)
 ## Author and Copyright
 CAG is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Muhammad Mudassar Qureshi (mudassar@hust.edu.cn), Hanhua Chen (chen@hust.edu.cn), Fan Zhang(zhangf@hust.edu.cn), Hai Jin (hjin@hust.edu.cn)
 
-Copyright (C) 2021, STCS & CGCL and Huazhong University of Science and Technology.
+Copyright (C) 2022, STCS & CGCL and Huazhong University of Science and Technology.
